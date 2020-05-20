@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assets</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Owner</th>
+      <th scope="col">Address</th>
+      <th scope="col">Rooms</th>
+      <th scope="col">Sqmt</th>
+      <th scope="col">Floors</th>
+      <th scope="col">Air cond</th>
+      <th scope="col">Price</th>
+      <th scope="col">Units</th>
+      <th scope="col">Shops</th>
+      <th scope="col">Parking</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assets.each do |asset| %>
+      <tr>
+        <td><%= asset.owner %></td>
+        <td><%= asset.address %></td>
+        <td><%= asset.rooms %></td>
+        <td><%= asset.sqmt %></td>
+        <td><%= asset.floors %></td>
+        <td><%= asset.air_cond %></td>
+        <td><%= asset.price %></td>
+        <td><%= asset.units %></td>
+        <td><%= asset.shops %></td>
+        <td><%= asset.parking %></td>
+        <td><%= link_to 'Show', asset %></td>
+        <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+        <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td> <%= link_to 'Buy', buy_asset_path(asset) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asset', new_asset_path %>

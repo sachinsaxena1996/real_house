@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @asset.owner %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @asset.address %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @asset.rooms %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @asset.sqmt %>
+</p>
+
+<p>
+  <strong>Floors:</strong>
+  <%= @asset.floors %>
+</p>
+
+<p>
+  <strong>Air cond:</strong>
+  <%= @asset.air_cond %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @asset.price %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @asset.units %>
+</p>
+
+<p>
+  <strong>Shops:</strong>
+  <%= @asset.shops %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @asset.parking %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <img src=<%= @asset.picture.url %>>
+</p>
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>
